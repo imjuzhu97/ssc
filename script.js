@@ -60,6 +60,14 @@ const renderUpcomingEvents = (events) => {
     details.append(time, seats);
 
     cta.href = event.ctaUrl;
+
+    if (event.soldOut) {
+      cta.classList.add("button-sold-out");
+      cta.setAttribute("aria-disabled", "true");
+      cta.setAttribute("tabindex", "-1");
+      cta.removeAttribute("href");
+    }
+
     body.append(details, cta);
     article.append(image, body);
     eventGrid.append(article);

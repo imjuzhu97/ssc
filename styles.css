@@ -234,6 +234,12 @@ h1 span {
   color: var(--cream);
 }
 
+.button-sold-out {
+  cursor: not-allowed;
+  opacity: .5;
+  pointer-events: none;
+}
+
 .hero-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
