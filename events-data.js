@@ -1,0 +1,136 @@
+// Edit this file to update SSC event metadata.
+// Add new ticketed events to `upcoming`; move hosted events into `past`.
+// Past events are grouped automatically by the year in the `date` field.
+window.SSC_EVENTS = {
+  stats: {
+    hostedEvents: 14,
+    matchedCouples: 47,
+  },
+  upcoming: [
+    {
+      dateLabel: "June 10",
+      title: "Speed Dating Dinner",
+      venue: "Mala Midtown",
+      time: "6:30 PM",
+      seats: "32 singles",
+      image: "assets/framer/event-midtown.png",
+      imageAlt: "June 10 Dinner and Get Lucky event poster for Mala Project Midtown",
+      ctaLabel: "RSVP on Resy",
+      ctaUrl: "https://resy.com/cities/new-york-ny/venues/mala-project/events/ma-la-project-x-odd-one-in-present-the-spiciest-supper-club-2026-06-10?seats=2&date=2026-04-08",
+    },
+    {
+      dateLabel: "June 13",
+      title: "Speed Dating Brunch",
+      venue: "Mala Greenpoint",
+      time: "12:30 PM",
+      seats: "40 singles",
+      image: "assets/framer/event-greenpoint.png",
+      imageAlt: "June 13 Dinner and Get Lucky brunch poster for Mala Greenpoint",
+      ctaLabel: "RSVP on Resy",
+      ctaUrl: "https://resy.com/cities/new-york-ny/venues/mala-project-greenpoint/events/ma-la-project-x-odd-one-in-present-the-spiciest-supper-club-singles-brunch-edition-2026-06-13?seats=2&date=2026-04-08",
+    },
+    {
+      dateLabel: "June 23",
+      title: "Speed Dating Dinner",
+      venue: "Gelso & Grand",
+      time: "6:30 PM",
+      seats: "40 singles",
+      image: "assets/framer/event-gelso.png",
+      imageAlt: "June 23 Dinner and Get Lucky event poster for Gelso and Grand",
+      ctaLabel: "RSVP on Luma",
+      ctaUrl: "https://luma.com/sdwh6a01",
+    },
+  ],
+  past: [
+    {
+      date: "2026-02-25",
+      dateLabel: "2/25",
+      title: "Speed Dating Dinner @ MáLà Midtown",
+      stats: "32 Singles, 3 Matches Made",
+    },
+    {
+      date: "2025-10-22",
+      dateLabel: "10/22",
+      title: "Speed Dating Dinner @ MáLà Midtown",
+      stats: "32 Singles, 4 Matches Made",
+    },
+    {
+      date: "2025-10-18",
+      dateLabel: "10/18",
+      title: "Speed Dating Brunch @ MáLà Greenpoint",
+      stats: "40 Singles, 3 Matches Made",
+    },
+    {
+      date: "2025-10-04",
+      dateLabel: "10/4",
+      title: "Speed Dating Dinner @ MáLà Greenpoint",
+      stats: "40 Singles, 3 Matches Made",
+    },
+    {
+      date: "2025-09-20",
+      dateLabel: "9/20",
+      title: "Speed Dating Dinner @ MáLà Greenpoint",
+      stats: "40 Singles, 2 Matches Made",
+    },
+    {
+      date: "2025-09-11",
+      dateLabel: "9/11",
+      title: "Speed Dating Dinner @ MáLà Midtown",
+      stats: "32 Singles, 3 Matches Made",
+    },
+    {
+      date: "2025-08-28",
+      dateLabel: "8/28",
+      title: "Speed Dating Dinner @ MáLà East Village",
+      stats: "28 Singles, 2 Matches Made",
+    },
+    {
+      date: "2025-08-21",
+      dateLabel: "8/21",
+      title: "Speed Dating Dinner @ MáLà Midtown",
+      stats: "32 Singles, 2 Matches Made",
+    },
+    {
+      date: "2025-07-24",
+      dateLabel: "7/24",
+      title: "Speed Dating Dinner @ MáLà East Village",
+      stats: "36 Singles, 4 Matches Made",
+    },
+    {
+      date: "2025-07-17",
+      dateLabel: "7/17",
+      title: "Speed Dating Dinner @ MáLà Midtown",
+      stats: "32 Singles, 5 Matches Made",
+    },
+    {
+      date: "2025-06-28",
+      dateLabel: "6/28",
+      title: "Speed Dating Dinner @ MáLà Greenpoint",
+      stats: "40 Singles, 3 Matches Made",
+    },
+    {
+      date: "2025-06-26",
+      dateLabel: "6/26",
+      title: "Speed Dating Dinner @ MáLà Midtown",
+      stats: "32 Singles, 3 Matches Made",
+    },
+    {
+      date: "2025-05-17",
+      dateLabel: "5/17",
+      title: "Speed Dating Dinner @ MáLà Midtown",
+      stats: "32 Singles, 2 Matches Made",
+    },
+    {
+      date: "2025-05-15",
+      dateLabel: "5/15",
+      title: "Speed Dating Dinner @ MáLà Greenpoint",
+      stats: "40 Singles, 5 Matches Made",
+    },
+    {
+      date: "2025-04-17",
+      dateLabel: "4/17",
+      title: "Speed Dating Dinner @ MáLà Midtown",
+      stats: "32 Singles, 3 Matches Made",
+    },
+  ],
+};
