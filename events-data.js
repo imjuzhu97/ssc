@@ -3,8 +3,8 @@
 // Past events are grouped automatically by the year in the `date` field.
 window.SSC_EVENTS = {
   stats: {
-    hostedEvents: 14,
-    matchedCouples: 47,
+    hostedEvents: 22,
+    matchedCouples: 66,
   },
   upcoming: [
     {
