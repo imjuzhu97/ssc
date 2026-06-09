@@ -279,9 +279,11 @@ h1 span {
   --gallery-tile-size: clamp(260px, 25vw, 360px);
   z-index: 1;
   justify-self: stretch;
-  width: calc(100% + var(--hero-pad-x));
+  width: calc(100% + (var(--hero-pad-x) * 2));
   margin-left: calc(var(--hero-pad-x) * -1);
   overflow: hidden;
+  mask-image: linear-gradient(90deg, #000 0%, #000 calc(100% - 104px), rgba(0, 0, 0, .42) calc(100% - 38px), transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 calc(100% - 104px), rgba(0, 0, 0, .42) calc(100% - 38px), transparent 100%);
 }
 
 .hero-gallery-track {
@@ -290,7 +292,7 @@ h1 span {
   gap: 0;
   overflow-x: auto;
   min-height: calc(var(--gallery-tile-size) + 72px);
-  padding: 34px var(--hero-pad-x) 38px 0;
+  padding: 34px calc(var(--hero-pad-x) * 2) 38px 0;
   cursor: grab;
   scroll-padding-left: 0;
   scroll-snap-type: x mandatory;
