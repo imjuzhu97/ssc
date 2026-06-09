@@ -45,6 +45,48 @@ window.SSC_EVENTS = {
   ],
   past: [
     {
+      date: "2026-05-23",
+      dateLabel: "5/23",
+      title: "Speed Dating Brunch @ MáLà Greenpoint",
+      stats: "40 Singles, 4 Matches Made",
+    },
+    {
+      date: "2026-05-05",
+      dateLabel: "5/5",
+      title: "Speed Dating Dinner @ MáLà Midtown",
+      stats: "32 Singles, 1 Matches Made",
+    },
+    {
+      date: "2026-04-11",
+      dateLabel: "4/11",
+      title: "Speed Dating Brunch @ MáLà Greenpoint",
+      stats: "40 Singles, 2 Matches Made",
+    },
+    {
+      date: "2026-04-07",
+      dateLabel: "4/7",
+      title: "Speed Dating Dinner @ MáLà Midtown",
+      stats: "32 Singles, 3 Matches Made",
+    },
+    {
+      date: "2026-03-18",
+      dateLabel: "3/18",
+      title: "Speed Dating Brunch @ MáLà Greenpoint",
+      stats: "40 Singles, 3 Matches Made",
+    },
+    {
+      date: "2026-03-11",
+      dateLabel: "3/11",
+      title: "Speed Dating Dinner @ MáLà Midtown",
+      stats: "32 Singles, 2 Matches Made",
+    },
+    {
+      date: "2026-03-02",
+      dateLabel: "3/2",
+      title: "Speed Dating Dinner @ MáLà Midtown",
+      stats: "32 Singles, 4 Matches Made",
+    },
+    {
       date: "2026-02-25",
       dateLabel: "2/25",
       title: "Speed Dating Dinner @ MáLà Midtown",
@@ -117,12 +159,6 @@ window.SSC_EVENTS = {
       stats: "32 Singles, 3 Matches Made",
     },
     {
-      date: "2025-05-23",
-      dateLabel: "5/23",
-      title: "Speed Dating Brunch @ MáLà Greenpoint",
-      stats: "40 Singles, 4 Matches Made",
-    },
-    {
       date: "2025-05-17",
       dateLabel: "5/17",
       title: "Speed Dating Dinner @ MáLà Midtown",
@@ -135,46 +171,10 @@ window.SSC_EVENTS = {
       stats: "40 Singles, 5 Matches Made",
     },
     {
-      date: "2025-05-05",
-      dateLabel: "5/5",
-      title: "Speed Dating Dinner @ MáLà Midtown",
-      stats: "32 Singles, 1 Matches Made",
-    },
-    {
       date: "2025-04-17",
       dateLabel: "4/17",
       title: "Speed Dating Dinner @ MáLà Midtown",
       stats: "32 Singles, 3 Matches Made",
-    },
-    {
-      date: "2025-04-11",
-      dateLabel: "4/11",
-      title: "Speed Dating Brunch @ MáLà Greenpoint",
-      stats: "40 Singles, 2 Matches Made",
-    },
-    {
-      date: "2025-04-07",
-      dateLabel: "4/7",
-      title: "Speed Dating Dinner @ MáLà Midtown",
-      stats: "32 Singles, 3 Matches Made",
-    },
-    {
-      date: "2025-03-18",
-      dateLabel: "3/18",
-      title: "Speed Dating Brunch @ MáLà Greenpoint",
-      stats: "40 Singles, 3 Matches Made",
-    },
-    {
-      date: "2025-03-11",
-      dateLabel: "3/11",
-      title: "Speed Dating Dinner @ MáLà Midtown",
-      stats: "32 Singles, 2 Matches Made",
-    },
-    {
-      date: "2025-03-02",
-      dateLabel: "3/2",
-      title: "Speed Dating Dinner @ MáLà Midtown",
-      stats: "32 Singles, 4 Matches Made",
     },
   ],
 };
