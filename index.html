@@ -105,32 +105,12 @@
         <div class="section-header">
           <p class="eyebrow">Upcoming events</p>
           <h2 id="events-title">Upcoming Events</h2>
-          <p data-events-summary>22 events, 66 couples matched so far.</p>
+          <p data-events-summary>23 events, 68 couples matched so far.</p>
         </div>
 
         <div class="upcoming-events">
         <div class="event-grid">
           <article class="event-card featured-event">
-            <img src="assets/framer/event-midtown.png?v=20260609-assets" alt="June 10 Dinner and Get Lucky event poster for Mala Project Midtown">
-            <div class="event-card-body">
-              <span class="tag">June 10</span>
-              <h3>Speed Dating Dinner</h3>
-              <p>@ Mala Midtown</p>
-              <dl>
-                <div>
-                  <dt>Time</dt>
-                  <dd>6:30 PM</dd>
-                </div>
-                <div>
-                  <dt>Seats</dt>
-                  <dd>32 singles</dd>
-                </div>
-              </dl>
-              <a class="button button-dark button-sold-out" aria-disabled="true" tabindex="-1">Sold out</a>
-            </div>
-          </article>
-
-          <article class="event-card">
             <img src="assets/framer/event-greenpoint.png?v=20260609-assets" alt="June 13 Dinner and Get Lucky brunch poster for Mala Greenpoint">
             <div class="event-card-body">
               <span class="tag">June 13</span>
@@ -180,11 +160,18 @@
         <section class="past-events-section collapsed" aria-labelledby="past-events-title">
           <div class="past-events-header">
             <h3 id="past-events-title">Past Events</h3>
-            <p data-past-summary>22 events, 66 couples matched.</p>
+            <p data-past-summary>23 events, 68 couples matched.</p>
           </div>
 
           <ol class="past-event-list">
             <li class="past-event-year">2026</li>
+            <li class="past-event-row">
+              <time datetime="2026-06-10">6/10</time>
+              <div>
+                <h4>Speed Dating Dinner @ MáLà Midtown</h4>
+              </div>
+              <p>32 Singles, 2 Matches Made</p>
+            </li>
             <li class="past-event-row">
               <time datetime="2026-05-23">5/23</time>
               <div>
@@ -199,7 +186,7 @@
               </div>
               <p>32 Singles, 1 Matches Made</p>
             </li>
-            <li class="past-event-row">
+            <li class="past-event-row" data-past-extra>
               <time datetime="2026-04-11">4/11</time>
               <div>
                 <h4>Speed Dating Brunch @ MáLà Greenpoint</h4>
@@ -435,7 +422,7 @@
       </div>
     </footer>
 
-    <script src="events-data.js?v=20260609-events-2026"></script>
+    <script src="events-data.js?v=20260612-events"></script>
     <script src="script.js"></script>
   </body>
 </html>

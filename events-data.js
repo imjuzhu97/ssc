@@ -3,22 +3,10 @@
 // Past events are grouped automatically by the year in the `date` field.
 window.SSC_EVENTS = {
   stats: {
-    hostedEvents: 22,
-    matchedCouples: 66,
+    hostedEvents: 23,
+    matchedCouples: 68,
   },
   upcoming: [
-    {
-      dateLabel: "June 10",
-      title: "Speed Dating Dinner",
-      venue: "Mala Midtown",
-      time: "6:30 PM",
-      seats: "32 singles",
-      image: "assets/framer/event-midtown.png?v=20260609-assets",
-      imageAlt: "June 10 Dinner and Get Lucky event poster for Mala Project Midtown",
-      ctaLabel: "Sold out",
-      ctaUrl: "https://resy.com/cities/new-york-ny/venues/mala-project/events/ma-la-project-x-odd-one-in-present-the-spiciest-supper-club-2026-06-10?seats=2&date=2026-04-08",
-      soldOut: true,
-    },
     {
       dateLabel: "June 13",
       title: "Speed Dating Brunch",
@@ -44,6 +32,12 @@ window.SSC_EVENTS = {
     },
   ],
   past: [
+    {
+      date: "2026-06-10",
+      dateLabel: "6/10",
+      title: "Speed Dating Dinner @ MáLà Midtown",
+      stats: "32 Singles, 2 Matches Made",
+    },
     {
       date: "2026-05-23",
       dateLabel: "5/23",
