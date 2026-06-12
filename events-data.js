@@ -30,6 +30,28 @@ window.SSC_EVENTS = {
       ctaLabel: "RSVP on Luma",
       ctaUrl: "https://luma.com/sdwh6a01",
     },
+    {
+      dateLabel: "July 8",
+      title: "Speed Dating Dinner",
+      venue: "Mala Midtown",
+      time: "6:30 PM",
+      seats: "32 singles",
+      image: "assets/framer/event-midtown-20260708.png",
+      imageAlt: "July 8 Dinner and Get Lucky event poster for Mala Project Midtown East 53rd Street",
+      ctaLabel: "RSVP on Resy",
+      ctaUrl: "https://resy.com/cities/new-york-ny/venues/mala-project/events/ma-la-project-x-odd-one-in-present-the-spiciest-supper-club-2026-07-08?date=2026-03-23&seats=2",
+    },
+    {
+      dateLabel: "July 11",
+      title: "Speed Dating Brunch",
+      venue: "Mala Greenpoint",
+      time: "12:30 PM",
+      seats: "40 singles",
+      image: "assets/framer/event-greenpoint-20260711.png",
+      imageAlt: "July 11 Love at First Spice brunch poster for Mala Project Greenpoint",
+      ctaLabel: "RSVP on Resy",
+      ctaUrl: "https://resy.com/cities/new-york-ny/venues/mala-project-greenpoint/events/ma-la-project-x-odd-one-in-present-the-spiciest-supper-club-singles-brunch-edition-2026-07-11?date=2026-03-23&seats=2",
+    },
   ],
   past: [
     {
