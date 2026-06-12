@@ -44,6 +44,7 @@ const renderUpcomingEvents = (events) => {
     const details = createElement("dl");
     const time = createElement("div");
     const seats = createElement("div");
+    const menu = createElement("div");
     const cta = createElement("a", "button button-dark", event.ctaLabel);
 
     image.src = event.image;
@@ -57,7 +58,8 @@ const renderUpcomingEvents = (events) => {
 
     time.append(createElement("dt", "", "Time"), createElement("dd", "", event.time));
     seats.append(createElement("dt", "", "Seats"), createElement("dd", "", event.seats));
-    details.append(time, seats);
+    menu.append(createElement("dt", "", "Menu"), createElement("dd", "", event.menu));
+    details.append(time, seats, menu);
 
     cta.href = event.ctaUrl;
 
