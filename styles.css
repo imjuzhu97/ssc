@@ -505,7 +505,7 @@ h1 span {
 }
 
 .event-card dl div {
-  padding: 13px;
+  padding: clamp(9px, 1.5vw, 13px);
   background: var(--panel);
 }
 
@@ -519,9 +519,10 @@ h1 span {
 .event-card dd {
   margin: 4px 0 0;
   color: var(--cream);
-  font-size: var(--meta-size);
+  font-size: clamp(12px, 1.15vw, var(--meta-size));
   font-weight: 400;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .waitlist-panel {
@@ -975,8 +976,7 @@ h1 span {
     width: 100%;
   }
 
-  .hero-stats,
-  .event-card dl {
+  .hero-stats {
     grid-template-columns: 1fr;
   }
 

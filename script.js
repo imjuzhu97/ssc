@@ -58,7 +58,7 @@ const renderUpcomingEvents = (events) => {
 
     time.append(createElement("dt", "", "Time"), createElement("dd", "", event.time));
     seats.append(createElement("dt", "", "Seats"), createElement("dd", "", event.seats));
-    menu.append(createElement("dt", "", "Menu"), createElement("dd", "", event.menu));
+    menu.append(createElement("dt", "", "Tasting menu"), createElement("dd", "", event.menu));
     details.append(time, seats, menu);
 
     cta.href = event.ctaUrl;
