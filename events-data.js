@@ -3,23 +3,10 @@
 // Past events are grouped automatically by the year in the `date` field.
 window.SSC_EVENTS = {
   stats: {
-    hostedEvents: 23,
-    matchedCouples: 68,
+    hostedEvents: 24,
+    matchedCouples: 74,
   },
   upcoming: [
-    {
-      dateLabel: "June 13",
-      title: "Speed Dating Brunch",
-      venue: "Mala Greenpoint",
-      time: "12:30 PM",
-      seats: "40 singles",
-      menu: "3-course",
-      image: "assets/framer/event-greenpoint.png?v=20260609-assets",
-      imageAlt: "June 13 Dinner and Get Lucky brunch poster for Mala Greenpoint",
-      ctaLabel: "Sold out",
-      ctaUrl: "https://resy.com/cities/new-york-ny/venues/mala-project-greenpoint/events/ma-la-project-x-odd-one-in-present-the-spiciest-supper-club-singles-brunch-edition-2026-06-13?seats=2&date=2026-04-08",
-      soldOut: true,
-    },
     {
       dateLabel: "June 23",
       title: "Speed Dating Dinner",
@@ -53,11 +40,17 @@ window.SSC_EVENTS = {
       menu: "3-course",
       image: "assets/framer/event-greenpoint-20260711.png?v=20260612-final",
       imageAlt: "July 11 Love at First Spice brunch poster for Mala Project Greenpoint",
-      ctaLabel: "RSVP on Resy",
-      ctaUrl: "https://resy.com/cities/new-york-ny/venues/mala-project-greenpoint/events/ma-la-project-x-odd-one-in-present-the-spiciest-supper-club-singles-brunch-edition-2026-07-11?date=2026-03-23&seats=2",
+      ctaLabel: "RSVP on Luma",
+      ctaUrl: "https://luma.com/x632vvne",
     },
   ],
   past: [
+    {
+      date: "2026-06-13",
+      dateLabel: "6/13",
+      title: "Speed Dating Brunch @ MáLà Greenpoint",
+      stats: "40 Singles, 6 Matches Made",
+    },
     {
       date: "2026-06-10",
       dateLabel: "6/10",
