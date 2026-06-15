@@ -13,7 +13,8 @@ const pastSummaries = document.querySelectorAll("[data-past-summary]");
 const waitlistSignupForm = document.querySelector("[data-waitlist-signup]");
 const waitlistSignupMessage = document.querySelector("[data-waitlist-message]");
 const KLAVIYO_COMPANY_ID = "XFd9sS";
-const KLAVIYO_REVISION = "2024-10-15";
+const KLAVIYO_LIST_ID = "";
+const KLAVIYO_REVISION = "2023-02-22";
 
 const setMenuState = (isOpen) => {
   document.body.classList.toggle("menu-open", isOpen);
@@ -213,45 +214,38 @@ const setWaitlistMessage = (message, type = "") => {
 };
 
 const subscribeToKlaviyo = async ({ email, firstName }) => {
-  const profileAttributes = {
-    email,
-    subscriptions: {
-      email: {
-        marketing: {
-          consent: "SUBSCRIBED",
-        },
-      },
-    },
-  };
-
-  if (firstName) {
-    profileAttributes.first_name = firstName;
+  if (!KLAVIYO_LIST_ID) {
+    throw new Error("Klaviyo list ID is missing");
   }
 
-  const response = await fetch(`https://a.klaviyo.com/client/subscriptions?company_id=${KLAVIYO_COMPANY_ID}`, {
+  const response = await fetch(`https://a.klaviyo.com/client/subscriptions/?company_id=${KLAVIYO_COMPANY_ID}`, {
     method: "POST",
     headers: {
-      "Content-Type": "application/vnd.api+json",
+      "Content-Type": "application/json",
       revision: KLAVIYO_REVISION,
     },
     body: JSON.stringify({
       data: {
         type: "subscription",
         attributes: {
+          list_id: KLAVIYO_LIST_ID,
           custom_source: "SSC website waitlist",
-          profile: {
-            data: {
-              type: "profile",
-              attributes: profileAttributes,
-            },
-          },
+          email,
         },
       },
     }),
   });
 
   if (!response.ok) {
-    throw new Error(`Klaviyo signup failed with status ${response.status}`);
+    const responseText = await response.text();
+    throw new Error(responseText || `Klaviyo signup failed with status ${response.status}`);
+  }
+
+  if (firstName && window.klaviyo?.identify) {
+    window.klaviyo.identify({
+      email,
+      first_name: firstName,
+    });
   }
 };
 
@@ -312,7 +306,7 @@ if (waitlistSignupForm) {
       setWaitlistMessage("You are on the list. We will send the next spicy invite soon.", "success");
     } catch (error) {
       console.error(error);
-      setWaitlistMessage("Something did not connect. Try again in a minute.", "error");
+      setWaitlistMessage("The waitlist is almost connected. Please try again soon.", "error");
     } finally {
       submitButton.disabled = false;
       submitButton.textContent = "Join the waitlist";
