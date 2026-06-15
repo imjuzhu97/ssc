@@ -10,6 +10,10 @@ const hostedEventStats = document.querySelectorAll("[data-stat-hosted]");
 const matchedCoupleStats = document.querySelectorAll("[data-stat-matched]");
 const eventsSummaries = document.querySelectorAll("[data-events-summary]");
 const pastSummaries = document.querySelectorAll("[data-past-summary]");
+const waitlistSignupForm = document.querySelector("[data-waitlist-signup]");
+const waitlistSignupMessage = document.querySelector("[data-waitlist-message]");
+const KLAVIYO_COMPANY_ID = "XFd9sS";
+const KLAVIYO_REVISION = "2024-10-15";
 
 const setMenuState = (isOpen) => {
   document.body.classList.toggle("menu-open", isOpen);
@@ -198,6 +202,59 @@ const enableMouseDragGallery = (track) => {
   });
 };
 
+const setWaitlistMessage = (message, type = "") => {
+  if (!waitlistSignupMessage) {
+    return;
+  }
+
+  waitlistSignupMessage.textContent = message;
+  waitlistSignupMessage.classList.toggle("is-success", type === "success");
+  waitlistSignupMessage.classList.toggle("is-error", type === "error");
+};
+
+const subscribeToKlaviyo = async ({ email, firstName }) => {
+  const profileAttributes = {
+    email,
+    subscriptions: {
+      email: {
+        marketing: {
+          consent: "SUBSCRIBED",
+        },
+      },
+    },
+  };
+
+  if (firstName) {
+    profileAttributes.first_name = firstName;
+  }
+
+  const response = await fetch(`https://a.klaviyo.com/client/subscriptions?company_id=${KLAVIYO_COMPANY_ID}`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/vnd.api+json",
+      revision: KLAVIYO_REVISION,
+    },
+    body: JSON.stringify({
+      data: {
+        type: "subscription",
+        attributes: {
+          custom_source: "SSC website waitlist",
+          profile: {
+            data: {
+              type: "profile",
+              attributes: profileAttributes,
+            },
+          },
+        },
+      },
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error(`Klaviyo signup failed with status ${response.status}`);
+  }
+};
+
 enableMouseDragGallery(heroGalleryTrack);
 
 if (window.SSC_EVENTS) {
@@ -228,5 +285,37 @@ if (pastEventsSection && pastEventsToggle) {
     const isCollapsed = pastEventsSection.classList.toggle("collapsed");
     pastEventsToggle.setAttribute("aria-expanded", String(!isCollapsed));
     pastEventsToggle.textContent = isCollapsed ? "Expand more" : "Show less";
+  });
+}
+
+if (waitlistSignupForm) {
+  waitlistSignupForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(waitlistSignupForm);
+    const firstName = String(formData.get("first_name") || "").trim();
+    const email = String(formData.get("email") || "").trim();
+    const submitButton = waitlistSignupForm.querySelector("button[type='submit']");
+
+    if (!email) {
+      setWaitlistMessage("Add your email and we will save you a spot on the list.", "error");
+      return;
+    }
+
+    submitButton.disabled = true;
+    submitButton.textContent = "Joining...";
+    setWaitlistMessage("");
+
+    try {
+      await subscribeToKlaviyo({ email, firstName });
+      waitlistSignupForm.reset();
+      setWaitlistMessage("You are on the list. We will send the next spicy invite soon.", "success");
+    } catch (error) {
+      console.error(error);
+      setWaitlistMessage("Something did not connect. Try again in a minute.", "error");
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = "Join the waitlist";
+    }
   });
 }

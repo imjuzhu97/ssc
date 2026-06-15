@@ -22,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=20260615-klaviyo-waitlist">
+    <link rel="stylesheet" href="styles.css?v=20260615-klaviyo-form">
   </head>
   <body>
     <header class="site-header">
@@ -210,7 +210,20 @@
             <span>New dates sell out fast. Join the list for first access to dinners, brunches, city launches, and very good table gossip.</span>
           </div>
           <div class="waitlist-form" aria-label="Join The Spiciest Supper Club waitlist">
-            <div class="klaviyo-form-TnNhKW"></div>
+            <form class="waitlist-signup" data-waitlist-signup>
+              <div class="waitlist-fields">
+                <label>
+                  <span>First name</span>
+                  <input type="text" name="first_name" autocomplete="given-name" placeholder="First name">
+                </label>
+                <label>
+                  <span>Email</span>
+                  <input type="email" name="email" autocomplete="email" placeholder="Email" required>
+                </label>
+              </div>
+              <button class="button button-primary" type="submit">Join the waitlist</button>
+              <p class="waitlist-message" data-waitlist-message aria-live="polite"></p>
+            </form>
           </div>
         </div>
         </div>
@@ -488,6 +501,6 @@
     </footer>
 
     <script src="events-data.js?v=20260614-june13-past"></script>
-    <script src="script.js?v=20260612-menu-3col"></script>
+    <script src="script.js?v=20260615-klaviyo-form"></script>
   </body>
 </html>

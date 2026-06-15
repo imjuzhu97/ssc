@@ -557,8 +557,76 @@ h1 span {
   width: 100%;
 }
 
-.waitlist-form > div {
+.waitlist-signup {
+  display: grid;
+  gap: 14px;
   width: 100%;
+}
+
+.waitlist-fields {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 12px;
+}
+
+.waitlist-fields label {
+  display: grid;
+  gap: 8px;
+}
+
+.waitlist-fields label span {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.waitlist-fields input {
+  width: 100%;
+  min-height: 54px;
+  border: 1px solid rgba(255, 252, 206, .38);
+  border-radius: 6px;
+  padding: 0 16px;
+  color: var(--cream);
+  background: rgba(255, 252, 206, .06);
+  font: inherit;
+  font-size: var(--body-size);
+  outline: none;
+  transition: border-color .18s ease, background .18s ease;
+}
+
+.waitlist-fields input::placeholder {
+  color: rgba(255, 252, 206, .54);
+}
+
+.waitlist-fields input:focus {
+  border-color: var(--orange);
+  background: rgba(255, 252, 206, .1);
+}
+
+.waitlist-signup .button {
+  width: 100%;
+}
+
+.waitlist-signup .button[disabled] {
+  cursor: wait;
+  opacity: .7;
+}
+
+.waitlist-message {
+  min-height: 22px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.waitlist-message.is-success {
+  color: var(--cream);
+}
+
+.waitlist-message.is-error {
+  color: var(--orange);
 }
 
 .past-events-section {
@@ -996,6 +1064,10 @@ h1 span {
   .waitlist-form,
   .city-section .button {
     width: 100%;
+  }
+
+  .waitlist-fields {
+    grid-template-columns: 1fr;
   }
 
   .hero-stats {
