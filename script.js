@@ -13,7 +13,7 @@ const pastSummaries = document.querySelectorAll("[data-past-summary]");
 const waitlistSignupForm = document.querySelector("[data-waitlist-signup]");
 const waitlistSignupMessage = document.querySelector("[data-waitlist-message]");
 const KLAVIYO_COMPANY_ID = "XFd9sS";
-const KLAVIYO_LIST_ID = "";
+const KLAVIYO_LIST_ID = "W792MU";
 const KLAVIYO_REVISION = "2023-02-22";
 
 const setMenuState = (isOpen) => {
