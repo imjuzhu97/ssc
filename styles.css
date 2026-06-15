@@ -153,7 +153,7 @@ h1,
 h2,
 .step h3,
 .next-title,
-.waitlist-panel p {
+.waitlist-copy p {
   font-family: var(--display);
   font-style: italic;
   font-weight: 500;
@@ -526,21 +526,39 @@ h1 span {
 }
 
 .waitlist-panel {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(240px, .8fr) minmax(320px, 1fr);
   align-items: center;
-  justify-content: center;
-  gap: 24px;
+  gap: clamp(24px, 5vw, 72px);
   margin-top: clamp(42px, 5vw, 74px);
+  scroll-margin-top: 120px;
 }
 
-.waitlist-panel .button {
-  min-width: 230px;
+.waitlist-copy {
+  display: grid;
+  gap: 14px;
 }
 
-.waitlist-panel p {
+.waitlist-copy p {
   margin: 0;
   font-size: clamp(30px, 4vw, 58px);
   line-height: .92;
+}
+
+.waitlist-copy span {
+  display: block;
+  max-width: 460px;
+  color: var(--muted);
+  font-size: var(--body-size);
+  line-height: 1.35;
+}
+
+.waitlist-form {
+  width: 100%;
+}
+
+.waitlist-form > div {
+  width: 100%;
 }
 
 .past-events-section {
@@ -938,7 +956,11 @@ h1 span {
     padding-top: 0;
   }
 
-  .waitlist-panel,
+  .waitlist-panel {
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+  }
+
   .site-footer {
     flex-direction: column;
     align-items: flex-start;
@@ -971,7 +993,7 @@ h1 span {
   .hero-actions,
   .button,
   .waitlist-panel,
-  .waitlist-panel .button,
+  .waitlist-form,
   .city-section .button {
     width: 100%;
   }
