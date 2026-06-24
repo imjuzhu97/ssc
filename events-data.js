@@ -8,18 +8,6 @@ window.SSC_EVENTS = {
   },
   upcoming: [
     {
-      dateLabel: "June 23",
-      title: "Speed Dating Dinner",
-      venue: "Gelso & Grand",
-      time: "6:30 PM",
-      seats: "40 singles",
-      menu: "4-course",
-      image: "assets/framer/event-gelso.png?v=20260609-assets",
-      imageAlt: "June 23 Dinner and Get Lucky event poster for Gelso and Grand",
-      ctaLabel: "RSVP on Luma",
-      ctaUrl: "https://luma.com/sdwh6a01",
-    },
-    {
       dateLabel: "July 8",
       title: "Speed Dating Dinner",
       venue: "Mala Midtown",
