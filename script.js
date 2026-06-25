@@ -66,9 +66,11 @@ const renderUpcomingEvents = (events) => {
     menu.append(createElement("dt", "", "Tasting menu"), createElement("dd", "", event.menu));
     details.append(time, seats, menu);
 
-    cta.href = event.ctaUrl;
+    if (event.ctaUrl) {
+      cta.href = event.ctaUrl;
+    }
 
-    if (event.soldOut) {
+    if (event.soldOut || event.ctaDisabled) {
       cta.classList.add("button-sold-out");
       cta.setAttribute("aria-disabled", "true");
       cta.setAttribute("tabindex", "-1");
