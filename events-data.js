@@ -8,18 +8,6 @@ window.SSC_EVENTS = {
   },
   upcoming: [
     {
-      dateLabel: "July 8",
-      title: "Speed Dating Dinner",
-      venue: "Mala Midtown",
-      time: "6:30 PM",
-      seats: "32 singles",
-      menu: "4-course",
-      image: "assets/framer/event-midtown-20260708.png?v=20260612-final",
-      imageAlt: "July 8 Dinner and Get Lucky event poster for Mala Project Midtown East 53rd Street",
-      ctaLabel: "RSVP on Luma",
-      ctaUrl: "https://luma.com/1yinpuet",
-    },
-    {
       dateLabel: "July 11",
       title: "Speed Dating Brunch",
       venue: "Mala Greenpoint",
