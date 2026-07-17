@@ -16,8 +16,9 @@ window.SSC_EVENTS = {
       menu: "3-course",
       image: "assets/framer/event-greenpoint-20260815.png?v=20260625-events",
       imageAlt: "August 15 Love at First Spice brunch poster for Mala Project Greenpoint",
-      ctaLabel: "RSVP on Resy",
+      ctaLabel: "SOLD OUT",
       ctaUrl: "https://resy.com/cities/new-york-ny/venues/mala-project-greenpoint/events/ma-la-project-x-odd-one-in-present-the-spiciest-supper-club-singles-brunch-edition-2026-08-15",
+      soldOut: true,
     },
     {
       dateLabel: "August 26",
