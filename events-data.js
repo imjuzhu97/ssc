@@ -8,18 +8,6 @@ window.SSC_EVENTS = {
   },
   upcoming: [
     {
-      dateLabel: "July 11",
-      title: "Speed Dating Brunch",
-      venue: "Mala Greenpoint",
-      time: "12:30 PM",
-      seats: "40 singles",
-      menu: "3-course",
-      image: "assets/framer/event-greenpoint-20260711.png?v=20260612-final",
-      imageAlt: "July 11 Love at First Spice brunch poster for Mala Project Greenpoint",
-      ctaLabel: "RSVP on Luma",
-      ctaUrl: "https://luma.com/x632vvne",
-    },
-    {
       dateLabel: "August 15",
       title: "Speed Dating Brunch",
       venue: "Mala Greenpoint",
