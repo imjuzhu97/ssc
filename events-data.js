@@ -16,8 +16,8 @@ window.SSC_EVENTS = {
       menu: "3-course",
       image: "assets/framer/event-greenpoint-20260815.png?v=20260625-events",
       imageAlt: "August 15 Love at First Spice brunch poster for Mala Project Greenpoint",
-      ctaLabel: "RSVP on Luma",
-      ctaUrl: "https://luma.com/3qd2ff20",
+      ctaLabel: "SOLD OUT",
+      soldOut: true,
     },
     {
       dateLabel: "August 26",
