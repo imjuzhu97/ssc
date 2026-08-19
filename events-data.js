@@ -8,18 +8,6 @@ window.SSC_EVENTS = {
   },
   upcoming: [
     {
-      dateLabel: "August 15",
-      title: "Speed Dating Brunch",
-      venue: "Mala Greenpoint",
-      time: "12:30 PM",
-      seats: "40 singles",
-      menu: "3-course",
-      image: "assets/framer/event-greenpoint-20260815.png?v=20260625-events",
-      imageAlt: "August 15 Love at First Spice brunch poster for Mala Project Greenpoint",
-      ctaLabel: "SOLD OUT",
-      soldOut: true,
-    },
-    {
       dateLabel: "August 26",
       title: "Speed Dating Dinner",
       venue: "Mala Midtown",
