@@ -8,18 +8,6 @@ window.SSC_EVENTS = {
   },
   upcoming: [
     {
-      dateLabel: "August 26",
-      title: "Speed Dating Dinner",
-      venue: "Mala Midtown",
-      time: "6:30 PM",
-      seats: "32 singles",
-      menu: "4-course",
-      image: "assets/framer/event-midtown-20260826.png?v=20260625-events",
-      imageAlt: "August 26 Dinner and Get Lucky event poster for Mala Project Midtown East 53rd Street",
-      ctaLabel: "RSVP on Resy",
-      ctaUrl: "https://resy.com/cities/new-york-ny/venues/mala-project/events/ma-la-project-x-odd-one-in-present-the-spiciest-supper-club-2026-08-26?date=2026-07-09&seats=2",
-    },
-    {
       dateLabel: "September 9",
       title: "Speed Dating Dinner",
       venue: "Mala Midtown",
