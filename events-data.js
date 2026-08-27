@@ -3,8 +3,8 @@
 // Past events are grouped automatically by the year in the `date` field.
 window.SSC_EVENTS = {
   stats: {
-    hostedEvents: 26,
-    matchedCouples: 83,
+    hostedEvents: 28,
+    matchedCouples: 90,
   },
   upcoming: [
     {
@@ -68,6 +68,18 @@ window.SSC_EVENTS = {
       dateLabel: "8/15",
       title: "Speed Dating Brunch @ MáLà Greenpoint",
       stats: "40 Singles, 5 Matches Made",
+    },
+    {
+      date: "2026-07-11",
+      dateLabel: "7/11",
+      title: "Speed Dating Brunch @ MáLà Greenpoint",
+      stats: "40 Singles, 4 Matches Made",
+    },
+    {
+      date: "2026-07-08",
+      dateLabel: "7/8",
+      title: "Speed Dating Dinner @ MáLà Midtown",
+      stats: "32 Singles, 3 Matches Made",
     },
     {
       date: "2026-06-13",
