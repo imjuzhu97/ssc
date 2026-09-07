@@ -16,8 +16,9 @@ window.SSC_EVENTS = {
       menu: "4-course",
       image: "assets/framer/event-midtown-20260909.png?v=20260625-events",
       imageAlt: "September 9 Dinner and Get Lucky event poster for Mala Project Midtown East 53rd Street",
-      ctaLabel: "RSVP on Resy",
+      ctaLabel: "SOLD OUT",
       ctaUrl: "https://resy.com/cities/new-york-ny/venues/mala-project/events/ma-la-project-x-odd-one-in-present-the-spiciest-supper-club-2026-09-09?date=2026-07-09&seats=2",
+      soldOut: true,
     },
     {
       dateLabel: "September 19",
