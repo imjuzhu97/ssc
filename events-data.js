@@ -3,22 +3,10 @@
 // Past events are grouped automatically by the year in the `date` field.
 window.SSC_EVENTS = {
   stats: {
-    hostedEvents: 28,
-    matchedCouples: 90,
+    hostedEvents: 29,
+    matchedCouples: 93,
   },
   upcoming: [
-    {
-      dateLabel: "October 7",
-      title: "Speed Dating Dinner",
-      venue: "Mala Midtown",
-      time: "6:30 PM",
-      seats: "32 singles",
-      menu: "4-course",
-      image: "assets/framer/event-midtown-20261007.png?v=20260625-events",
-      imageAlt: "October 7 Dinner and Get Lucky event poster for Mala Project Midtown East 53rd Street",
-      ctaLabel: "RSVP on Resy",
-      ctaUrl: "https://resy.com/cities/new-york-ny/venues/mala-project/events/ma-la-project-x-odd-one-in-present-the-spiciest-supper-club-2026-10-07?date=2026-07-09&seats=2",
-    },
     {
       dateLabel: "October 17",
       title: "Speed Dating Brunch",
@@ -28,11 +16,17 @@ window.SSC_EVENTS = {
       menu: "3-course",
       image: "assets/framer/event-greenpoint-20261017.png?v=20260625-events",
       imageAlt: "October 17 Love at First Spice brunch poster for Mala Project Greenpoint",
-      ctaLabel: "RSVP on Resy",
+      ctaLabel: "Last 3 tickets",
       ctaUrl: "https://resy.com/cities/new-york-ny/venues/mala-project-greenpoint/events/ma-la-project-x-odd-one-in-present-the-spiciest-supper-club-singles-brunch-edition-2026-10-17?date=2026-07-09&seats=2",
     },
   ],
   past: [
+    {
+      date: "2026-10-07",
+      dateLabel: "10/7",
+      title: "Speed Dating Dinner @ MáLà Midtown",
+      stats: "32 Singles, 3 Matches Made",
+    },
     {
       date: "2026-08-26",
       dateLabel: "8/26",
