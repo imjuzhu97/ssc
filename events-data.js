@@ -6,20 +6,7 @@ window.SSC_EVENTS = {
     hostedEvents: 29,
     matchedCouples: 93,
   },
-  upcoming: [
-    {
-      dateLabel: "October 17",
-      title: "Speed Dating Brunch",
-      venue: "Mala Greenpoint",
-      time: "12:30 PM",
-      seats: "40 singles",
-      menu: "3-course",
-      image: "assets/framer/event-greenpoint-20261017.png?v=20260625-events",
-      imageAlt: "October 17 Love at First Spice brunch poster for Mala Project Greenpoint",
-      ctaLabel: "Last 3 tickets",
-      ctaUrl: "https://resy.com/cities/new-york-ny/venues/mala-project-greenpoint/events/ma-la-project-x-odd-one-in-present-the-spiciest-supper-club-singles-brunch-edition-2026-10-17?date=2026-07-09&seats=2",
-    },
-  ],
+  upcoming: [],
   past: [
     {
       date: "2026-10-07",
