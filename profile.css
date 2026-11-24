@@ -1,0 +1,53 @@
+.account { width:min(100% - 40px,580px); margin:40px auto 80px; color:var(--ink) }
+.account h1 { font:italic 42px Georgia,serif; margin:32px 0 12px }
+.account label { display:grid; gap:6px; font-weight:650; margin:18px 0 }
+.account input,.account select { width:100%; min-width:0; padding:12px; border:1px solid #897977; border-radius:5px; background:white; color:#211414; font:inherit }
+.account button { background:var(--ink); color:var(--cream); border:0; border-radius:6px; padding:12px 18px; font:inherit; cursor:pointer; margin:10px 0 }
+.account #portrait { object-fit:cover; border-radius:50% }
+.account [hidden] { display:none }
+.account fieldset { min-width:0; margin:22px 0; border:0; padding:0 }
+.account legend { font-weight:650; padding:0; margin-bottom:8px }
+.answer-options { display:flex; flex-wrap:wrap; gap:8px }
+.account .answer-options label { display:flex; align-items:center; gap:8px; min-height:44px; margin:0; padding:8px 12px; border:1px solid #897977; border-radius:6px; cursor:pointer; font-weight:400 }
+.account .answer-options input { width:16px; height:16px; margin:0; accent-color:#831e1c }
+.answer-options label:has(:checked) { background:#f2dfd8; border-color:#831e1c }
+.account input[type=range] { padding:0; height:32px; accent-color:#831e1c }
+.account .range-ends { display:flex; justify-content:space-between; font-size:14px; font-weight:400 }
+.account label:has(input[type=range]) small { order:1; text-align:center }
+.account textarea { width:100%; min-height:78px; padding:12px; border:1px solid #897977; border-radius:5px; resize:vertical; font:inherit }
+.account h2 { margin:32px 0 8px; padding-top:18px; border-top:1px solid #a99e96; font:italic 29px Georgia,serif }
+.account #savedPhoto { object-fit:cover; border-radius:50% }
+.account dt { font-weight:650; margin-top:18px }
+.account dd { margin:4px 0; overflow-wrap:anywhere }
+body { background:#f7f5ee; color:var(--ink) }
+main.account { background:transparent; border-radius:0; overflow:visible }
+.member-nav { display:flex; align-items:center; gap:28px; padding:18px max(5%,24px); border-bottom:1px solid #bfb6aa; font-size:14px }
+.member-nav a:first-child { margin-right:auto }
+.member-nav a { text-decoration:none }
+.member-nav span { border-bottom:2px solid #b91616; font-weight:bold }
+.account { display:grid; grid-template-columns:minmax(240px,.88fr) minmax(0,1fr); width:min(90%,1120px); gap:7%; align-items:start; margin:40px auto }
+.table-photo { position:relative; min-height:570px; background:#411e18 url('assets/hero-gallery/ssc-gallery-20260417-09.jpg') center/cover no-repeat }
+.account .table-photo h1 { position:absolute; bottom:0; margin:0; padding:52px 24px 18px; width:100%; color:#fffccc; font:italic 64px/1 Georgia,serif; background:linear-gradient(transparent,#21090ae0) }
+.member-content { min-width:0; padding:4px 0 24px }
+#notice { margin:0 0 22px; font-size:13px; color:#685853 }
+.member-id { display:flex; gap:18px; align-items:center }
+.member-id img { background:#321515; flex:none }
+.account .member-id h2,.account #editor>h2 { font:normal 36px/1.15 Georgia,serif; margin:0 0 4px; padding:0; border:0; overflow-wrap:anywhere }
+.member-id span { font-size:14px }
+.account blockquote { color:#831e1c; margin:20px 0 26px; font:italic 25px/1.3 Georgia,serif; overflow-wrap:anywhere }
+.account .section-row { display:flex; justify-content:space-between; gap:12px; align-items:center; width:100%; text-align:left; background:transparent; border-radius:0; color:var(--ink); border-top:1px solid #c4b9aa; padding:16px 2px; margin:0 }
+.section-row strong,.section-row small { display:block }
+.section-row strong { font:normal 23px Georgia,serif }
+.section-row small { margin-top:4px; color:#665851 }
+.account .section-row:hover { color:#a01b18; background:#eeeae0 }
+.account .cancel { color:var(--ink); background:none; text-decoration:underline }
+.account button:not(.section-row):not(.cancel) { border-radius:999px; min-height:44px; padding-inline:24px; font-weight:600 }
+.account :focus-visible,.member-nav :focus-visible { outline:3px solid #ad3320; outline-offset:3px }
+@media(max-width:720px) {
+  .member-nav { padding:14px 18px; gap:14px }
+  .member-nav img { width:126px }
+  .account { display:block; width:100%; margin:0 auto }
+  .table-photo { min-height:155px; background-position:center 40% }
+  .account .table-photo h1 { font-size:46px }
+  .member-content { padding:22px 20px }
+}

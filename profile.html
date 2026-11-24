@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>My profile | The Spiciest Supper Club</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="profile.css">
+<script defer src="ssc-auth-sdk.js"></script><script defer src="profile-config.js"></script><script defer src="profile.js"></script></head>
+<body><header class="member-nav"><a href="index.html"><img width="168" src="assets/brand/ssc-logo-20260609.png" alt="The Spiciest Supper Club home"></a><a href="index.html#events">Events</a><span>My profile</span></header>
+<main class="account"><aside class="table-photo"><h1>My profile</h1></aside><div class="member-content">
+<p id="notice" role="status">Loading your profile...</p>
+<section id="signin" hidden><h2>Create your SSC profile</h2><p>Tell us who you'd like to meet and what to keep in mind for dinner.</p><button id="google">Continue with Google</button><form id="emailForm"><label>Email address<input required type="email" autocomplete="email" name="email"></label><button>Email me a sign-in link</button></form></section>
+<form id="editor" hidden><p>Your answers and photo are private to you and the SSC team.</p>
+<img id="portrait" hidden width="112" height="112" alt="Your profile photo">
+<label>Profile photo<input id="photo" type="file" accept="image/jpeg,image/png,image/webp"><small>Choose a JPG, PNG or WebP, up to 10 MB.</small></label>
+<div id="questions"></div><button id="save">Save profile</button></form>
+<section hidden id="demoSaved"><div class="member-id"><img id="savedPhoto" width="76" height="76" alt="Profile avatar"><div><h2 id="memberName"></h2><span id="memberAge"></span></div></div><blockquote id="intro"></blockquote><div id="demoSummary"></div></section>
+<button id="logout" hidden>Sign out</button></div></main></body></html>
