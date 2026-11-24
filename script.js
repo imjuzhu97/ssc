@@ -1,6 +1,3 @@
-const menuButton = document.querySelector(".menu-button");
-const mobileNav = document.querySelector(".mobile-nav");
-const navLinks = document.querySelectorAll(".mobile-nav a");
 const pastEventsSection = document.querySelector(".past-events-section");
 const pastEventsToggle = document.querySelector(".past-events-toggle");
 const eventGrid = document.querySelector(".event-grid");
@@ -16,10 +13,6 @@ const KLAVIYO_COMPANY_ID = "XFd9sS";
 const KLAVIYO_LIST_ID = "W792MU";
 const KLAVIYO_REVISION = "2023-02-22";
 
-const setMenuState = (isOpen) => {
-  document.body.classList.toggle("menu-open", isOpen);
-  menuButton?.setAttribute("aria-expanded", String(isOpen));
-};
 
 const createElement = (tagName, className, text) => {
   const element = document.createElement(tagName);
@@ -259,22 +252,6 @@ if (window.SSC_EVENTS) {
   renderPastEvents(window.SSC_EVENTS.past);
 }
 
-if (menuButton && mobileNav) {
-  menuButton.addEventListener("click", () => {
-    const isExpanded = menuButton.getAttribute("aria-expanded") === "true";
-    setMenuState(!isExpanded);
-  });
-
-  navLinks.forEach((link) => {
-    link.addEventListener("click", () => setMenuState(false));
-  });
-
-  window.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      setMenuState(false);
-    }
-  });
-}
 
 if (pastEventsSection && pastEventsToggle) {
   pastEventsToggle.addEventListener("click", () => {

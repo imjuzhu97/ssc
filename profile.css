@@ -19,7 +19,7 @@
 .account #savedPhoto { object-fit:cover; border-radius:50% }
 .account dt { font-weight:650; margin-top:18px }
 .account dd { margin:4px 0; overflow-wrap:anywhere }
-body { background:#f7f5ee; color:var(--ink) }
+body { background:var(--page); color:var(--ink) }
 main.account { background:transparent; border-radius:0; overflow:visible }
 .member-nav { display:flex; align-items:center; gap:28px; padding:18px max(5%,24px); border-bottom:1px solid #bfb6aa; font-size:14px }
 .member-nav a:first-child { margin-right:auto }
