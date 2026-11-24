@@ -89,6 +89,7 @@
     let db, uid, data;
     const demo = !url && !publishableKey;
     if (!demo) {
+    const callbackError = [location.search,location.hash].some(part => new URLSearchParams(part.slice(1)).has("error"));
     db = window.supabase.createClient(url,publishableKey);
     const redirect = location.origin + location.pathname;
     id("google").onclick = async () => {
@@ -97,12 +98,20 @@
     };
     id("emailForm").onsubmit = async (e) => {
       e.preventDefault();
-      const {error} = await db.auth.signInWithOtp({email:e.target.elements.email.value,options:{emailRedirectTo:redirect}});
-      status(error ? "Could not send the sign-in link. Please try again." : "Check your inbox for your sign-in link.");
+      const submit = e.target.querySelector("button"); submit.disabled = true;
+      try {
+        const {error} = await db.auth.signInWithOtp({email:e.target.elements.email.value.trim(),options:{emailRedirectTo:redirect}});
+        if (error) throw error;
+        status("Check your inbox and spam folder. Open the newest SSC link to continue.");
+      } catch { status("Could not send a link. Check your email address and try again in a minute."); }
+      finally { submit.disabled = false; }
     };
     const {data:{session},error} = await db.auth.getSession();
     if (error) throw error;
-    if (!session) { id("signin").hidden = false; return status("Sign in to create or edit your profile."); }
+    if (!session) { id("signin").hidden = false; return status(callbackError ? "Sign-in was canceled or the link expired. Try Google again or request a fresh email link." : "Sign in to create or edit your profile."); }
+    db.auth.onAuthStateChange((event,next) => {
+      if (event === "SIGNED_OUT" || (next && next.user.id !== session.user.id)) location.replace(redirect);
+    });
     id("logout").hidden = false;
     id("logout").onclick = async () => {
       const {error} = await db.auth.signOut();
@@ -172,8 +181,9 @@
     }
     function welcome() {
       editor.hidden = true; id("signin").hidden = false;
-      id("emailForm").hidden = true; id("google").textContent = "Try the profile preview";
-      status("Preview only · Nothing is sent or saved after refresh. Use sample details.");
+      id("authOptions").hidden = true; id("previewOptions").hidden = false;
+      id("authIntro").textContent = "Member login is not available yet. Explore the signup flow or see what a returning member's profile looks like.";
+      status("Preview only · No account is created. Changes reset on refresh.");
     }
     cancel.onclick = () => {
       if (creating) { remember(); if (editing) openStep(editing-1); else if (demo) welcome(); else location.assign("index.html"); }
@@ -182,7 +192,15 @@
     const begin = () => { id("signin").hidden = true; openStep(0); };
     if (demo) {
       editor.querySelector("p").textContent = "Try the survey with sample answers. Nothing is uploaded.";
-      id("google").onclick = begin;
+      id("newPreview").onclick = begin;
+      id("returnPreview").onclick = () => {
+        Object.assign(sample,{firstName:"Alex",lastName:"Rivera",birthDate:"1997-05-12",handle:"@alex.example",phone:"2125550123",fact:"I keep a running ranking of scallion pancakes."});
+        savedPhoto = demoAvatar; creating = false; id("signin").hidden = true;
+        overview("Sample member · Not logged in. Changes reset on refresh.");
+      };
+      id("logout").textContent = "Exit preview";
+      id("logout").onclick = () => location.reload();
+      id("previewOptions").addEventListener("click",() => { id("logout").hidden = false; });
       welcome();
     } else if (creating) begin(); else overview();
     let preview;
