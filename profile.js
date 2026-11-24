@@ -87,10 +87,12 @@
   const {url,publishableKey} = window.sscProject;
   try {
     let db, uid, data;
-    const demo = !url && !publishableKey;
+    const demo = location.protocol === "file:" || (!url && !publishableKey);
     if (!demo) {
     const callbackError = [location.search,location.hash].some(part => new URLSearchParams(part.slice(1)).has("error"));
     db = window.supabase.createClient(url,publishableKey);
+    id("google").hidden = !window.sscProject.googleEnabled;
+    if (window.sscProject.teamEmailOnly) id("authIntro").textContent = "Guest registration is not open yet. SSC team members can sign in with their Supabase team email.";
     const redirect = location.origin + location.pathname;
     id("google").onclick = async () => {
       const {error} = await db.auth.signInWithOAuth({provider:"google",options:{redirectTo:redirect}});
@@ -108,7 +110,7 @@
     };
     const {data:{session},error} = await db.auth.getSession();
     if (error) throw error;
-    if (!session) { id("signin").hidden = false; return status(callbackError ? "Sign-in was canceled or the link expired. Try Google again or request a fresh email link." : "Sign in to create or edit your profile."); }
+    if (!session) { id("signin").hidden = false; return status(callbackError ? "Sign-in was canceled or the link expired. Request a fresh email link." : (window.sscProject.teamEmailOnly ? "Team access" : "Sign in to create or edit your profile.")); }
     db.auth.onAuthStateChange((event,next) => {
       if (event === "SIGNED_OUT" || (next && next.user.id !== session.user.id)) location.replace(redirect);
     });
