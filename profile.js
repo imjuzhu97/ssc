@@ -92,7 +92,7 @@
     const callbackError = [location.search,location.hash].some(part => new URLSearchParams(part.slice(1)).has("error"));
     db = window.supabase.createClient(url,publishableKey);
     id("google").hidden = !window.sscProject.googleEnabled;
-    if (window.sscProject.teamEmailOnly) id("authIntro").textContent = "Continue with Google to create or open your profile. Google login is in testing; email links are for SSC team members only.";
+    if (window.sscProject.teamEmailOnly) id("authIntro").textContent = "Continue with Google to create your supper club profile or return to one you’ve already saved.";
     const redirect = location.origin + location.pathname;
     id("google").onclick = async () => {
       const {error} = await db.auth.signInWithOAuth({provider:"google",options:{redirectTo:redirect}});
